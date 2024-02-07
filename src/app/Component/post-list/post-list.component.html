@@ -1,0 +1,59 @@
+<div class="col-sm-4">
+    <form>
+
+        <input type="radio" name="fancy" autofocus value="clubs" id="clubs" />
+        <input type="radio" name="fancy" value="hearts" id="hearts" />
+        <input type="radio" name="fancy" value="spades" id="spades" />
+        <input type="radio" name="fancy" value="diamonds" id="diamonds" />			
+        
+        <label for="clubs"><img src="./assets/14.webp" alt="blog" width="100%" height="710"/></label>
+        <label for="hearts"><img src="./assets/15.png"  alt="BLOG" width="100%" height="710"/></label>
+        <label for="spades"><img src="./assets/16.png" alt="BLOG" width="100%" height="710" /></label>
+        <label for="diamonds"><img src="./assets/17.png" alt="BLOG" width="100%" height="710" /></label>
+  
+    </form>
+</div>
+
+
+
+
+<div style="background-image: url(./assets/100.jpg)">
+ <div class="container" style="width: 100%; margin: auto; margin-top: 700px;">
+    <h1><b><i>Explore the Cricketer Blogs</i></b></h1>
+    <br>
+    <ng-container *ngFor="let data of Data">
+        <div class="news-container">
+
+            <div class="news-card">
+
+                <div>
+
+                    <img src="{{'data:image/jpg;base64,' +data.url}}" style="width:80%; height:300px; margin-top: 20px; border-radius: 5px;">
+
+                </div>
+
+                <div class="card-body">
+
+                <p class="card-text" style="color: aliceblue;"><b>Title:</b> {{data.title}} </p>
+                <p class="card-text" style="color: aliceblue;"><b>Author: </b> {{data.author}}</p>
+
+                </div>
+
+                <div class="news-buttons" style="margin-bottom: 25px; margin-top: 10px;">
+
+                    <button class="btn btn-light" routerLink='/comment/{{data.id}}'>Add Comment</button>
+
+                    <button class="btn btn-info" routerLink = '/detail/{{data.id}}'>Details</button>
+                
+                </div>
+
+            </div>
+
+        </div>  
+
+    </ng-container>
+
+ </div>
+</div>
+
+

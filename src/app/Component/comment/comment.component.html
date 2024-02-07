@@ -1,0 +1,34 @@
+<!-- <div style="height: 500px;"> -->
+    <!-- <div style=" background-image: url(./assets/09.jpeg ); height:500px"> -->
+<div class="a" style=" background-image: url(./assets/09.jpeg );">
+   
+<div class="comments-container" style="text-align: center; ">
+    <div style="padding-top: 10%; padding-bottom: 10%;">
+    <!-- <div style="margin-top: 100px;"> -->
+        <div class="card-text">
+    <h1  ><b ><i>Comments</i></b></h1>
+    <div *ngFor="let com of comm" class="comment-item" style="text-align: center; " >
+        <strong><h5><b>Name:</b> {{ com.name }}  </h5></strong>
+    <strong><h5><b>Comment:</b> {{ com.comment }} </h5></strong>
+    <p>{{ com.text }}</p>
+    </div>
+    <br> <br> <br>
+    <div class="add-comment" ><br>
+    <h1><b><i>Add a new Comment</i></b></h1>
+    <form >
+    <div class="form-group">    
+    </div>
+    <div class="form-group">
+    <label for="commentText">Comment</label>
+    <textarea (blur)=" onChangeFileField($event)" id="commentText" name="commentText" [(ngModel)]="comme.comment" required></textarea>
+    </div>
+    <button type="submit" (click)="addComm()"  > <i style="margin-top: 500px;">Submit Comment</i></button >
+
+    </form>
+    </div>
+</div>
+</div>
+    </div>
+</div>
+
+

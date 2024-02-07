@@ -1,0 +1,62 @@
+<div style="background-image: url(./assets/100.jpg);">
+  <div class="wrapper" style="margin-left: 35%; ">
+  <div class="form-wrapper sign-up" >
+  <form (ngSubmit)="onSubmit(registrationForm.value)" #registrationForm="ngForm">
+    <h2 style="margin-left: 29%;"><b>Sign Up</b></h2>
+    <div class="input-group" style="margin-left: 18%;">
+      <input type="text" name="fName" autocomplete="off" [(ngModel)] = "reg.fName" required>
+      <label for=""><b>First Name</b></label>
+    </div>
+    <div class="input-group" style="margin-left: 18%;">
+      <input type="text" name="lName" autocomplete="off" [(ngModel)] = "reg.lName" required>
+      <label for=""><b>Last Name</b></label>
+    </div>
+    <div class="input-group" style="margin-left: 18%;">
+      <input type="text" name="username" autocomplete="off" [(ngModel)] = "reg.username" required>
+      <label for=""><b>Username</b></label>
+    </div>
+    <div class="input-group" style="margin-left: 18%;">
+      <input type="email" name="email" autocomplete="off" [(ngModel)] = "reg.email" required>
+      <label for=""><b>Email</b></label>
+    </div>
+    <div class="input-group" style="margin-left: 18%;">
+      <input type="password" name="password" autocomplete="off"[(ngModel)] = "reg.password" required>
+      <label for=""><b>Password</b></label>
+    </div>
+    <div class="input-group" style="margin-left: 18%;">
+      <input type="password" name="cnfrmPassword" autocomplete="off" [(ngModel)] = "reg.cnfrmPassword" required>
+      <label for=""><b>Confirm Password</b></label>
+    </div>
+    <div class="remember" style="margin-left: 18%;">
+      <label><input type="checkbox"> I agree to the terms & conditions</label>
+    </div>
+    <div class="error-message" *ngIf="registrationForm.invalid && (registrationForm.dirty || registrationForm.touched)" style="margin-left: 18%;">
+    Please fill out all the required fields.
+    </div>
+    <button type="submit" style="margin-left: 18%;">Sign Up</button>
+    <div class="signUp-link" style="margin-left: 27%;">
+      <p>Already have an account? <a  routerLink='/login' class="signInBtn-link">Sign In</a></p>
+    </div>
+  </form>
+</div>
+</div>
+</div>
+
+
+
+
+
+
+   
+
+  
+
+    
+
+  
+
+  
+
+  
+
+

@@ -1,0 +1,24 @@
+<div style="background-image: url(./assets/100.jpg);">
+<div class="wrapper" style="margin-left: 35%; ">
+  <div class="form-wrapper sign-in">
+    <form action="" (ngSubmit)="onSubmit()">
+      <h2>Login</h2>
+      <div class="input-group">
+        <input type="text" autocomplete="off" name="username" [(ngModel)]="credentials.username"/>
+        <label for="">Username</label>
+      </div>
+      <div class="input-group">
+        <input type="password" name="password" [(ngModel)]="credentials.password"/>
+        <label for="">Password</label>
+      </div>
+      <div class="remember">
+        <label><input type="checkbox"> Remember me</label>
+      </div>
+      <button type="submit"(click)="onSubmit()" >Login</button>
+      <div class="signUp-link">
+        <p>Don't have an account? <a routerLink="/register" class="signUpBtn-link">Sign Up</a></p>
+      </div>
+    </form>
+  </div>
+</div>
+</div>

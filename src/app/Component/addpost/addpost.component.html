@@ -1,0 +1,105 @@
+<!-- Make sure to include Bootstrap CSS for styling -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" integrity="sha384-rbs5AVbA6P2OlfW6C8r/1az9+zYYlxxl5ksR86Z5Vooj6Oz3nG9cc5p7e8UckfA" crossorigin="anonymous">
+
+<div style="background-image: url(./assets/103.jpg);">
+  <div class="a" style="color:white; background-image: url(./assets/103.jpg);">
+    <form class="blog-post-form" #blogPostForm="ngForm" (ngSubmit)="onSubmit()" style="text-align:center; background-image: url(./assets/103.jpg)">
+      <h2 style="text-align:center"><b><i>Publish Blog</i></b></h2>
+      <div class="form-group">
+        <label for="title">Title</label>
+        <input type="text" id="title" name="title" [(ngModel)]="blogPost.title" required>
+      </div>
+      <div class="form-group">
+        <label for="content">Content</label>
+        <textarea id="content" name="content" [(ngModel)]="blogPost.content" required></textarea>
+      </div>
+      <div class="form-group">
+        <label for="author">Author</label>
+        <input type="text" id="author" name="author" [(ngModel)]="blogPost.author" required>
+      </div>
+      <div class="form-group">
+        <label for="date">Date</label>
+        <input type="date" id="date" name="date" style="text-align:center" [(ngModel)]="blogPost.date" required>
+      </div>
+      <div class="form-group">
+        <label for="tags">Tags</label>
+        <input type="text" id="tags" name="tags" [(ngModel)]="blogPost.tags" required>
+      </div>
+      <div class="form-group">
+        <label for="url">Choose Image</label>
+          <input type="file" name="url" id="url" (change)="onFileChange($event)" accept="image/*" [(ngModel)]="blogPost.url" required>
+        </div >
+      <div class="form-actions">
+        <button class="btn btn-success" type="submit" [disabled]="blogPostForm.invalid">Submit</button>
+        <button class="btn btn-danger" routerLink="/posts">Back</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+
+
+
+<!-- <div style="background-image: url(./assets/100.jpg);">
+    <div class="wrapper" style="margin-left: 480px; ">
+    <div class="form-wrapper sign-up" >
+    <form (ngSubmit)="onSubmit(registrationForm.value)" #registrationForm="ngForm">
+      <h2><b>Publish Blog</b></h2>
+      <div class="input-group">
+        <input type="text" name="fName" autocomplete="off" [(ngModel)] = "reg.fName" required>
+        <label for=""><b>First Name</b></label>
+      </div>
+      <div class="input-group">
+        <input type="text" name="lName" autocomplete="off" [(ngModel)] = "reg.lName" required>
+        <label for=""><b>Last Name</b></label>
+      </div>
+      <div class="input-group">
+        <input type="text" name="username" autocomplete="off" [(ngModel)] = "reg.username" required>
+        <label for=""><b>Username</b></label>
+      </div>
+      <div class="input-group">
+        <input type="email" name="email" autocomplete="off" [(ngModel)] = "reg.email" required>
+        <label for=""><b>Email</b></label>
+      </div>
+      <div class="input-group">
+        <input type="password" name="password" autocomplete="off"[(ngModel)] = "reg.password" required>
+        <label for=""><b>Password</b></label>
+      </div>
+      <div class="input-group">
+        <input type="password" name="cnfrmPassword" autocomplete="off" [(ngModel)] = "reg.cnfrmPassword" required>
+        <label for=""><b>Confirm Password</b></label>
+      </div>
+      <div class="remember">
+        <label><input type="checkbox"> I agree to the terms & conditions</label>
+      </div>
+      <div class="error-message" *ngIf="registrationForm.invalid && (registrationForm.dirty || registrationForm.touched)">
+      Please fill out all the required fields.
+      </div>
+      <button type="submit">Sign Up</button>
+      <div class="signUp-link">
+        <p>Already have an account? <a  routerLink='/login' class="signInBtn-link">Sign In</a></p>
+      </div>
+    </form>
+  </div>
+  </div>
+  </div>
+  
+  
+   -->
+  
+  
+  
+     
+  
+    
+  
+      
+  
+    
+  
+    
+  
+    
+  
+  
+  
